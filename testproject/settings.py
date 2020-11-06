@@ -37,6 +37,16 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
 )
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            # ... some options here ...
+        },
+    },
+]
 
 MIDDLEWARE_CLASSES = (
 )
@@ -56,6 +66,5 @@ TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 NOSE_ARGS = [
     '--nocapture',
     '--nologcapture',
-    '--rednose',
     '--verbosity', '2',
 ]
